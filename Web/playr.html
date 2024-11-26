@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jut.py</title>
+    <link rel="shortcut icon" type="image/x-icon" href="jut-py.png">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="/jutsu.js"></script>
+</head>
+<body>
+    <button type="button" id="und">Und Video</button>
+    <button type="button" id="skip">Skip Video</button>
+
+    <div id="div">
+        <div id="child">
+            <video class="video-js vjs-default-skin" id="video" src="https://" type="video/mp4" lang="ru" label="1080p" res="1080" width="700" height="500" controls></video>
+        </div>
+    </div>
+
+   <p>
+       Enter URL:
+       <input id="elem1" type="text" name="quantity" placeholder="url">
+       <button onclick="myFunction()">Click me</button>
+    </p>
+
+    <form>
+      <label>Выбор серии:</label>
+      <select id="season" onchange="seasonChange()"></select>
+
+      <label>Выбор сезона:</label>
+      <select id="episode" onchange="episodeChange()"></select>
+
+      <label>Выбор качества:</label>
+      <select id="quality" onchange="qualityChange()">
+          <option value="1">1080p</option>
+          <option value="2">720p</option>
+          <option value="3">480p</option>
+          <option value="4">360p</option>
+      </select>
+    </form>
+
+    <label>Сохранённые аниме:</label>
+    <select id="anime" onchange="choiceAnime()"></select>
+
+    <form>
+        <button type="button" id="DelAnim">Delete selected anime </button>
+        <button type="button" id="DelAllAnim">Delete all anime </button>
+    </form>
+
+    <script type="text/javascript" src="/NewSkip.js"></script>
+    <script type="text/javascript" src="/database.js"></script>
+</body>
+</html>
