@@ -1,8 +1,9 @@
 const video = document.getElementById('video');
 const playPauseBtn = document.getElementById('playPause');
-const stopBtn = document.getElementById('stop');
+const skipOpeningBtn = document.getElementById('skipOpening');
 const rewindBtn = document.getElementById('rewind');
 const forwardBtn = document.getElementById('forward');
+const fullscreenBtn = document.getElementById('fullscreen');
 
 // Воспроизведение и пауза
 playPauseBtn.addEventListener('click', () => {
@@ -15,11 +16,8 @@ playPauseBtn.addEventListener('click', () => {
     }
 });
 
-// Остановка
-stopBtn.addEventListener('click', () => {
-    video.pause();
-    video.currentTime = 0;
-    playPauseBtn.textContent = 'Play';
+skipOpeningBtn.addEventListener('click', () =>{
+    video.currentTime += 120;
 });
 
 // Перемотка назад
@@ -31,8 +29,6 @@ rewindBtn.addEventListener('click', () => {
 forwardBtn.addEventListener('click', () => {
     video.currentTime += 10;
 });
-
-const fullscreenBtn = document.getElementById('fullscreen');
 
 // Полноэкранный режим
 fullscreenBtn.addEventListener('click', () => {
