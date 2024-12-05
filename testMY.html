@@ -19,16 +19,36 @@
             position: absolute;
             bottom: 10px;
         }
+
+       #rewind {
+            position: absolute;
+            top: 0px;
+            padding-top: 25%;
+            padding-bottom: 25%;
+            padding-right: 23%;
+            padding-left: 23%;
+            left: 0px;
+       }
+
+       #forward {
+            position: absolute;
+            top: 0px;
+            padding-top: 25%;
+            padding-bottom: 25%;
+            padding-right: 23%;
+            padding-left: 23%;
+            left: 50%;
+       }
     </style>
 </head>
 <body>
     <div class="video-container">
         <video id="video" src="https://hdd.anipower.ru/Arifureta/1.mp4"></video>
+        <button id="rewind"><<</button>
+        <button id="forward">>></button>
         <div class="controls">
             <button id="playPause">Play</button>
             <button id="skipOpening">Skip</button>
-            <button id="rewind">Rewind 10s</button>
-            <button id="forward">Forward 10s</button>
             <button id="fullscreen">Fullscreen</button>
         </div>
     </div>
