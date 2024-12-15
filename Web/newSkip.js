@@ -32,7 +32,6 @@ function Count(x) {
         option.textContent = 'серия '+String(episodeID+1);
         episode.append(option)
     }
-    Video();
 }
 
 function seasonChange(){
@@ -91,15 +90,7 @@ function Und() {
 }
 
 function Video() {
-    let perdiv = document.getElementById("div");
-    let chidiv = document.getElementById("child");
-    perdiv.removeChild(chidiv);
-    let div = document.createElement('div')
-    div.id = "child";
-
     let episode = document.getElementById('episode');
-    div.innerHTML = "<video class=\"video-js vjs-default-skin\" id=\"video\" src=" + episode.value + " type=\"video/mp4\" lang=\"ru\" -label=\"1080p\" res=\"1080\" width=\"700\" height=\"500\" controls></video>\n";
-
-    perdiv.append(div);
-    document.getElementById("video").play();
+    document.getElementById("video").src = episode.value;
+    fplayPause()
 }

@@ -11,21 +11,11 @@
     <button type="button" id="und">Und Video</button>
     <button type="button" id="skip">Skip Video</button>
 
-    <div class="video-container">
-        <video id="video" src="https://r812132.yandexwebcache.org/kaijuu-8-gou/1.1080.3952b24673e3292f.mp4?hash1=1736dd9ef20423a06ccfe378b0827238&hash2=39b9ff271178315065514215a1c91e12"></video>
-        <button id="rewind"><<</button>
-        <button id="forward">>></button>
-        <button id="playPauseFullScreen">Play</button>
-        <div class="controls">
-            <button id="playPause">Play</button>
-            <button id="skipOpening">Skip</button>
-            <div class="slider-container"><input type="range" id="progress" min="0" max="100" value="0" step="0.1"></div>
-            <span id="timeDisplay">00:00:00 / 00:00:00</span>
-            <button id="fullscreen">Fullscreen</button>
+    <div id="div">
+        <div id="child">
+            <video class="video-js vjs-default-skin" id="video" src="https://" type="video/mp4" lang="ru" label="1080p" res="1080" width="700" height="500" controls></video>
         </div>
     </div>
-    <script type="text/javascript" src="/script.js"></script>
-    <script type="text/javascript" src="/controlsPy.js"></script>
 
    <p>
        Enter URL:
@@ -57,8 +47,7 @@
         <button type="button" id="DelAllAnim">Delete all anime </button>
     </form>
 
-    <script type="text/javascript" src="/newSkip.js"></script>
-    <script type="text/javascript" src="/dataBase.js"></script>
-    <link rel="stylesheet" href="controls.css">
+    <script type="text/javascript" src="/NewSkip.js"></script>
+    <script type="text/javascript" src="/database.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 document.getElementById("DelAnim").addEventListener("click", DelAnim, false);
 document.getElementById("DelAllAnim").addEventListener("click", DelAllAnim, false);
 
-function Database(){
+function DataBase(){
     eel.Database(navigator.userAgent)
 }
 
@@ -28,12 +28,12 @@ function choiceAnime() {
 function DelAnim() {
     const container = document.getElementById('anime');
     eel.DelAnime(navigator.userAgent, container.value)
-    Database()
+    DataBase()
 }
 
 function DelAllAnim() {
     eel.DelAllAnime(navigator.userAgent)
-    Database()
+    DataBase()
 }
 
-Database()
+DataBase()
