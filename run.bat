@@ -1,1 +1,2 @@
-python main.py --PluginID 0 --Help 1
+python main.py --PluginID "default.py" --UnbanDPI "unselected" --Help 1
+::pause

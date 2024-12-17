@@ -8,21 +8,27 @@ import eel
 def Argument(arg, main, minor):
    for ln in range(len(arg)):
       if arg[ln] == main or arg[ln] == minor:
-         return int(arg[ln+1])
+         return arg[ln+1]
          break
    else:
       return None
 
 arg = sys.argv[1:]
 
-a = Argument(arg, "--PluginID", "-pi")
-if a != None: Plugin = list(["default.py"] + os.listdir("plugins"))[a]
+UnbanDPI = Argument(arg, "--UnbanDPI", "-ub")
+if UnbanDPI == "unselected": pass
+elif UnbanDPI != None: os.system(fr"start unbanDPI\{UnbanDPI}")
+else:
+   Ub = Unban()
+   if Ub != "unselected": os.system(fr"start unbanDPI\{Ub}")
+
+PluginID = Argument(arg, "--PluginID", "-pi")
+if PluginID != None: Plugin = PluginID
 else: Plugin = SelectionPlugin()
 
 Logo('')
 print('='*(shutil.get_terminal_size()[0]))
 print(Plugin)
-
 
 
 eel.init("Web")

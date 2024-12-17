@@ -1,5 +1,6 @@
 import os
 import shutil
+from sys import flags
 
 error = ''
 
@@ -56,5 +57,27 @@ def SelectionPlugin():
                     nomder -= 1
                     if nomder < 0:
                         nomder = len(plaginsname)-1
+        else:
+            error = "{FATAL ERROR!!!}"
+
+def Unban():
+    global error
+    flag = True
+
+    while flag == True:
+        Logo(error)
+        print("[General selection]" + "="*(shutil.get_terminal_size()[0]-19))
+        print("\033[31m{}".format("If the program does not work, find a way to bypass the haschita!!! Does not work on Linux and MacOS.")+"\033[36m{}".format(""))
+        general = ["unselected"]
+        for file in os.listdir("unbanDPI"):
+            if file[:7] == "general":
+                general.append(file)
+        for nameID in range(len(general)): print(f"{nameID}# {general[nameID]}")
+        temporaryNomder = input("?: ")
+
+        if (temporaryNomder.isdigit() and int(temporaryNomder) < len(general)):
+            error = ""
+            return general[int(temporaryNomder)]
+            flag == False
         else:
             error = "{FATAL ERROR!!!}"

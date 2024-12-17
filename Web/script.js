@@ -7,7 +7,11 @@ const forwardBtn = document.getElementById('forward');
 const fullscreenBtn = document.getElementById('fullscreen');
 const progress = document.getElementById('progress');
 const timeDisplay = document.getElementById('timeDisplay');
+const setOpenings = document.getElementById('settingOpenings');
 const controls = document.querySelector('.controls');
+
+let durationOpening = 110;
+setOpenings.value = durationOpening;
 
 function hideButtonAfterDelay(button) {
     button.style.opacity = '1'; // Показываем кнопку при нажатии
@@ -15,6 +19,10 @@ function hideButtonAfterDelay(button) {
         button.style.opacity = '0'; // Скрываем кнопку через 0.5 сек
     }, 750);
 }
+
+setOpenings.addEventListener('input', (event) => {
+    durationOpening = event.target.value;
+});
 
 // Воспроизведение и пауза
 playPauseBtn.addEventListener('click', () => {
@@ -28,7 +36,7 @@ playPauseBtn.addEventListener('click', () => {
 });
 
 skipOpeningBtn.addEventListener('click', () =>{
-    video.currentTime += 110;
+    video.currentTime += parseInt(durationOpening);
 });
 
 let lastClickTime = null;
