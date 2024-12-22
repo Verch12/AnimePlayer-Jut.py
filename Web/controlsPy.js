@@ -8,8 +8,13 @@ function fplayPause() {
     }
 }
 
+function fsetOpenings(value) {
+    durationOpening = value
+    setOpenings.value = value
+}
+
 function fskipOpening() {
-    video.currentTime += 110;
+    video.currentTime += parseInt(durationOpening);
 }
 
 function frewind() {
@@ -24,8 +29,8 @@ function fforward() {
 
 function ffullscreen() {
     if (!document.fullscreenElement) {
-        video.parentElement.requestFullscreen(); // Переход в полноэкранный режим для контейнера
+        video.parentElement.requestFullscreen();
     } else {
-        document.exitFullscreen(); // Выход из полноэкранного режима
+        document.exitFullscreen();
     }
 }

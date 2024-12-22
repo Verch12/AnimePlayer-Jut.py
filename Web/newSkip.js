@@ -32,6 +32,7 @@ function Count(x) {
         option.textContent = 'серия '+String(episodeID+1);
         episode.append(option)
     }
+    document.getElementById("video").src = anime[0][0][document.getElementById('quality').selectedIndex];
 }
 
 function seasonChange(){
@@ -51,10 +52,6 @@ function seasonChange(){
         }
         episode.append(option)
     }
-    Video();
-}
-
-function episodeChange() {
     Video();
 }
 
