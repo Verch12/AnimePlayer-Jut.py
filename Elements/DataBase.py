@@ -2,7 +2,7 @@ import os
 import shutil
 
 def Write(agent, url, anime):
-    path = f'save/{agent.replace("/", "!")}/'
+    path = f'Save/{agent.replace("/", "!")}/'
 
     try:
         os.makedirs(path)
@@ -13,7 +13,7 @@ def Write(agent, url, anime):
         f.write(str(anime)+'==')
 
 def Read_anime(agent, url):
-    path = f'save/{agent.replace("/", "!")}/'
+    path = f'Save/{agent.replace("/", "!")}/'
     mass_anime = []
 
     with open(os.path.join(path, url[8:].replace("/", "!")+'.set'), 'r', encoding='utf-8') as f:
@@ -36,7 +36,7 @@ def Read_anime(agent, url):
     return mass_anime
 
 def Learn_anime(agent, url):
-    path = f'save/{agent.replace("/", "!")}/'
+    path = f'Save/{agent.replace("/", "!")}/'
 
     try:
         with open(os.path.join(path, url[8:].replace("/", "!") + '.set'), 'r', encoding='utf-8') as f:
@@ -46,7 +46,7 @@ def Learn_anime(agent, url):
 
 
 def List_anime(agent):
-    path = f'save/{agent.replace("/", "!")}/'
+    path = f'Save/{agent.replace("/", "!")}/'
     list_anime = []
 
     try:
@@ -57,13 +57,13 @@ def List_anime(agent):
     return list_anime
 
 def Delete_anime(agent, url):
-    path = f'save/{agent.replace("/", "!")}/'
+    path = f'Save/{agent.replace("/", "!")}/'
     anime = os.path.join(path, url[8:].replace("/", "!")+'.set')
 
     os.remove(anime)
 
 def DeleteAll_anime(agent):
-    path = f'save/{agent.replace("/", "!")}/'
+    path = f'Save/{agent.replace("/", "!")}/'
 
     shutil.rmtree(path)
 

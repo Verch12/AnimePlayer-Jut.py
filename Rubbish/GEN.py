@@ -16,7 +16,7 @@ for i in range(num_files):
     filename += file_extension
 
     # Создание файла
-    with open("plugins/"+filename, "w", encoding="utf-8") as f:
+    with open("Plugins/"+filename, "w", encoding="utf-8") as f:
         # Добавление какого-либо содержимого в файл (необязательно)
         f.write("#Содержимое файла")
 

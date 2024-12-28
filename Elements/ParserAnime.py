@@ -1,6 +1,6 @@
 from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
-from ParserJut import pars_site
+from Elements.ParserJut import pars_site
 
 def parser_anime(agent, url):
     url_anime = pars_site(agent, url)

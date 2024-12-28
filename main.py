@@ -1,8 +1,8 @@
-from ParserAnime import parser_anime
-from Cmd import *
-import sys
-import DataBase
+from Elements.ParserAnime import parser_anime
+from Elements.Cmd import *
+from Elements import DataBase
 #import threading
+import sys
 import eel
 
 def Argument(arg, main, minor):
@@ -17,10 +17,10 @@ arg = sys.argv[1:]
 
 UnbanDPI = Argument(arg, "--UnbanDPI", "-ub")
 if UnbanDPI == "unselected": pass
-elif UnbanDPI != None: os.system(fr"start unbanDPI\{UnbanDPI}")
+elif UnbanDPI != None: os.system(fr"start UnbanDPI\{UnbanDPI}")
 else:
    Ub = Unban()
-   if Ub != "unselected": os.system(fr"start unbanDPI\{Ub}")
+   if Ub != "unselected": os.system(fr"start UnbanDPI\{Ub}")
 
 PluginID = Argument(arg, "--PluginID", "-pi")
 if PluginID != None: Plugin = PluginID

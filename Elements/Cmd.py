@@ -1,6 +1,5 @@
 import os
 import shutil
-from sys import flags
 
 error = ''
 
@@ -25,7 +24,7 @@ def SelectionPlugin():
     nomder = 0
 
     while nomder != -1:
-        list = ["default.py"] + os.listdir("plugins")
+        list = ["default.py"] + os.listdir("Plugins")
         plaginsname = [list[i:i + shutil.get_terminal_size()[1] - 15] for i in range(0, len(list), shutil.get_terminal_size()[1] - 15)]
         indentation = len(f"{len(list) - 1}#")
 
