@@ -35,3 +35,4 @@ discord-attachments-uploads-prd.storage.googleapis.com
 10tv.app
 cloudflare-ech.com
 jut.su
+genjut.su
