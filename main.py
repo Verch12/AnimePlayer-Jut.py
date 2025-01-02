@@ -1,7 +1,8 @@
-from Elements.ParserAnime import parser_anime
+from Elements.ParserAnime import Parser_anime
 from Elements.Cmd import *
 from Elements import DataBase
-#import threading
+from Elements import PluginControl
+import threading,importlib
 import sys
 import eel
 
@@ -28,7 +29,6 @@ else: Plugin = SelectionPlugin()
 
 Logo('')
 print('='*(shutil.get_terminal_size()[0]))
-print(Plugin)
 
 
 eel.init("Web")
@@ -50,9 +50,16 @@ def myFunction(user_agent, url):
    if DataBase.Learn_anime(user_agent, url):
       eel.Count(DataBase.Read_anime(user_agent, url))
    else:
-      DataBase.Write(user_agent, url, parser_anime(user_agent, url))
+      DataBase.Write(user_agent, url, Parser_anime(user_agent, url))
       eel.Count(DataBase.Read_anime(user_agent, url))
+
+def PluginLoop():
+   print(Plugin)
+   plagin = importlib.import_module(f"Plugins.{Plugin[:-3]}", ".")
+   plagin.Plugin(PluginControl.PlayerControls(eel))
+
+if Plugin != "default.py":
+   threading.Thread(target=PluginLoop).start()
 
 eel.start("playr.html", size=(750, 700))
 
-#threading.Thread(target=loop1).start()

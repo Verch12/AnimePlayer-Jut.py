@@ -2,7 +2,7 @@ from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 from Elements.ParserJut import pars_site
 
-def parser_anime(agent, url):
+def Parser_anime(agent, url):
     url_anime = pars_site(agent, url)
     long = len(url_anime)
     fils = []
