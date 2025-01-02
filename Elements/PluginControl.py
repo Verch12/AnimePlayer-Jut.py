@@ -1,3 +1,6 @@
+from Elements import Cmd
+import os
+
 class PlayerControls():
     def __init__(self, eel):
         self.eel = eel
@@ -34,3 +37,9 @@ class PlayerControls():
 
     def UndEpisode(self):
         self.eel.fundEpisode()
+
+    def Exit(self):
+        os.system(R'taskkill /F /IM chrome.exe')
+
+    def ResetCMD(self, Error):
+        Cmd.Logo(Error)
