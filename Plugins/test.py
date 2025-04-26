@@ -3,5 +3,5 @@ class Plugin:
         print('Hello World!')
         print("GOOD GOB!!!")
         self.control = control
-
-        control.SetOpenings(123)
+        
+        self.control.SetOpening(123)

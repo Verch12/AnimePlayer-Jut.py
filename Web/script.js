@@ -8,6 +8,8 @@ const fullscreenBtn = document.getElementById('fullscreen');
 const progress = document.getElementById('progress');
 const timeDisplay = document.getElementById('timeDisplay');
 const setOpenings = document.getElementById('settingOpenings');
+const undBtn = document.getElementById('und');
+const skipBtn = document.getElementById('skip');
 const controls = document.querySelector('.controls');
 
 let durationOpening = 110;
@@ -81,6 +83,8 @@ let hideControlsTimeout;
 
 const showControls = () => {
     controls.style.opacity = '1';
+    undBtn.style.opacity = '1';
+    skipBtn.style.opacity = '1';
     rewindBtn.style.cursor = "auto";
     forwardBtn.style.cursor = "auto";
     playPauseFullScreenBtn.style.cursor = "auto";
@@ -88,6 +92,8 @@ const showControls = () => {
     hideControlsTimeout = setTimeout(() => {
         if (document.fullscreenElement) {
             controls.style.opacity = '0';
+            undBtn.style.opacity = '0';
+            skipBtn.style.opacity = '0';
             rewindBtn.style.cursor = "none";
             forwardBtn.style.cursor = "none";
             playPauseFullScreenBtn.style.cursor = "none";
@@ -102,6 +108,8 @@ video.parentElement.addEventListener('mousemove', showControls);
 document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
         controls.style.opacity = '1';
+        undBtn.style.opacity = '1';
+        skipBtn.style.opacity = '1';
     }
 });
 

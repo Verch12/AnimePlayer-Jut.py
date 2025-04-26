@@ -4,4 +4,4 @@ class Plugin:
         print("GOOD GOB!!!")
         self.control = control
 
-        control.SetOpenings(321)
+        self.control.SetOpening(321)

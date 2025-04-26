@@ -1,1 +1,1 @@
-python main.py -pi "serial_test.py" --UnbanDPI "unselected"
+python main.py -pi "IR-remoted.py" --UnbanDPI "general(ALT2).bat"

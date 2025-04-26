@@ -1,2 +1,2 @@
-python main.py --PluginID "default.py" --UnbanDPI "unselected" --Help 1
+python main.py --PluginID "default.py" --UnbanDPI "general(ALT2).bat" --Help 1
 ::pause
