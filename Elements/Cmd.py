@@ -70,7 +70,7 @@ def Unban():
         print("[General selection]" + "="*(shutil.get_terminal_size()[0]-19))
         print("\033[31m{}".format("If the program does not work, find a way to bypass the haschita!!! Does not work on Linux and MacOS.")+"\033[36m{}".format(""))
         general = ["unselected"]
-        for file in os.listdir("unbanDPI"):
+        for file in os.listdir("UnbanDPI"):
             if file[:7] == "general":
                 general.append(file)
         for nameID in range(len(general)): print(f"{nameID}# {general[nameID]}")
